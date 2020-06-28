@@ -29,12 +29,12 @@ Restrictions can be adjusted in the config.<br>
 このmodは以下のライセンスの元で公開されます。 <br>
 This mod is distributed under the following license:
 ## Code: All Rights Reserved
-<br>
-###Conditions
+
+### Conditions
 - 著作権者の表示 Copyright notice
 - 商用利用禁止 Commercial use prohibition
 
-###Permissions
+### Permissions
 - ソースコードを改変したり、あなたのmodプロジェクトに利用することができます。
   You can fork, modify, or use the code in your project.
 - このmodの非改変バイナリパッケージをmodpackに同梱したり、マルチプレイサーバー内で再配布することができます。
@@ -42,7 +42,7 @@ This mod is distributed under the following license:
 - このmodを導入したマインクラフトのサーバー、modpack、およびゲームプレイの映像については、作者の同意を得ることなく、商用目的で利用することができます。
   You can use Minecraft server, modpack, and gameplay footage that introduced this mod for commercial purposes without consent of the author.
 
-###Limitations
+### Limitations
 - このmodは「現状のまま」提供され、一切の動作を保証しません。
   This mod is provided "as is" without warranty of any kind.
 - 作者および著作権者は、いかなる場合でも、このmodの使用その他によって生じる責任を負いません。
