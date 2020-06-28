@@ -1,0 +1,21 @@
+[
+  {
+    "description":"",
+    "parent":"",
+    "logoFile":"logofile_x64.png",
+    "credits":"defeatedcrow",
+    "dependencies":[],
+    "modid":"dcs_minutes",
+    "mcversion":"1.12.2",
+    "screenshots":[],
+    "authorList":[
+      "defeatedcrow"
+    ],
+    "name":"5MinutesCountdown",
+    "url":"http://defeatedcrow.jp/modwiki/Mainpage",
+    "updateUrl":"",
+    "version":"1.12.2_1.0.0",
+    "requiredMods":[]
+  }
+]
+
