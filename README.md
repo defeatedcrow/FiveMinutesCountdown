@@ -7,13 +7,13 @@ Please visit my new Wiki: http://defeatedcrow.jp/modwiki/Mainpage
 # Introduction
 - This is a mod for Minecraft(JE).<br>
 
-## プレイヤーが死亡すると、ドロップアイテムの消滅時間である5分間のタイマーを表示します。<br>
+### プレイヤーが死亡すると、ドロップアイテムの消滅時間である5分間のタイマーを表示します。<br>
 コンフィグにより、カスタマイズが可能です。<br>
 - デスポーン地点のマーカー表示
 - 他タイマーの表示位置、サイズ
 - タイマーの制限時間の長さ<br>
 
-## When a player dies, a 5 minute timer (expire of player's drop item) is displayed.<br>
+### When a player dies, a 5 minute timer (expire of player's drop item) is displayed.<br>
 You can edit the following with config.<br>
 - Marker for player's despawn coordinates
 - Font size
@@ -29,6 +29,7 @@ Restrictions can be adjusted in the config.<br>
 このmodは以下のライセンスの元で公開されます。 <br>
 This mod is distributed under the following license:
 ## Code: All Rights Reserved
+<br>
 ###Conditions
 - 著作権者の表示 Copyright notice
 - 商用利用禁止 Commercial use prohibition
