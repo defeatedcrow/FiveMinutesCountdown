@@ -3,7 +3,6 @@ package defeatedcrow.minutes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
@@ -20,6 +19,8 @@ public class DisplayCounterEvent {
 	public static int count = MinutesCore.timer;
 	public static boolean active = false;
 
+	public static int check = 0;
+
 	@SubscribeEvent
 	public void doRender(RenderGameOverlayEvent.Post event) {
 		if (event.getType() != null && event.getType() == ElementType.ALL) {
@@ -31,26 +32,33 @@ public class DisplayCounterEvent {
 					int time = count / 20;
 					int min = time / 60;
 					int sec = time % 60;
-					String disp = "Countdown: " + min + ":" + (sec < 10 ? "0" + sec : sec);
+					String disp = MinutesCore.timerName + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec :
+							sec);
 
 					FontRenderer fr = Minecraft.getMinecraft().fontRenderer;
-
-					float f = (float) MinutesCore.size;
-					GlStateManager.scale(f, f, f);
 
 					int offsetX = MinutesCore.offsetX;
 					int offsetY = MinutesCore.offsetY;
 					int x = offsetX;
 					int y = offsetY;
 
-					if (time <= 10)
+					if (time <= 10) {
 						fr.drawString(disp, x, y, 0xFF00FF, true);
-					else if (time <= 30)
+					} else if (time <= 30) {
 						fr.drawString(disp, x, y, 0xFF80FF, true);
-					else if (min == 0)
+					} else if (min == 0) {
 						fr.drawString(disp, x, y, 0xFFCCFF, true);
-					else
+					} else {
 						fr.drawString(disp, x, y, 0xFFFFFF, true);
+					}
+
+					if (count <= 0) {
+						check++;
+					}
+
+					if (check > 5) {
+						active = false;
+					}
 
 				}
 			}

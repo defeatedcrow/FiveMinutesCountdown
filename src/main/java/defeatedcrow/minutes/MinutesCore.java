@@ -18,7 +18,7 @@ public class MinutesCore {
 	public static final String MOD_NAME = "5MinutesCountdown";
 	public static final int MOD_MEJOR = 1;
 	public static final int MOD_MINOR = 0;
-	public static final int MOD_BUILD = 0;
+	public static final int MOD_BUILD = 1;
 
 	@SidedProxy(clientSide = "defeatedcrow.minutes.ClientProxy", serverSide = "defeatedcrow.minutes.CommonProxy")
 	public static CommonProxy proxy;
@@ -43,26 +43,26 @@ public class MinutesCore {
 	public static boolean useGlow = true;
 	public static int offsetX = 5;
 	public static int offsetY = 2;
-	public static double size = 2.0D;
 	public static int timer = 6000;
+	public static String timerName = "Countdown: ";
 
 	public void loadConfig(Configuration cfg) {
 
 		try {
 			cfg.load();
 
+			Property n = cfg.get("setting", "TimerName", timerName);
 			Property t = cfg.get("setting", "TimerLength", timer);
-			Property f = cfg.get("setting", "FontSize", size);
 			Property x = cfg.get("setting", "DisplayOffsetX", offsetX);
 			Property y = cfg.get("setting", "DisplayOffsetY", offsetY);
 			Property g = cfg
 					.get("setting", "EnableGlowing", useGlow, "Enable glowing effect on the player despawn point.");
 
-			size = f.getDouble();
 			timer = t.getInt();
 			offsetX = x.getInt();
 			offsetY = y.getInt();
 			useGlow = g.getBoolean();
+			timerName = n.getString();
 
 		} catch (Exception e) {
 			e.printStackTrace();

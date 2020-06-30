@@ -16,7 +16,9 @@ public class PacketMessageHandler implements IMessageHandler<PacketMessage, IMes
 			if (DisplayCounterEvent.INSTANCE.count > c) {
 				DisplayCounterEvent.INSTANCE.count = c;
 			}
-			if (!b) {
+			if (b) {
+				DisplayCounterEvent.INSTANCE.check = 0;
+			} else {
 				DisplayCounterEvent.INSTANCE.count = MinutesCore.timer;
 			}
 			DisplayCounterEvent.INSTANCE.active = b;
